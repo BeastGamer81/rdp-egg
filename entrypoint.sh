@@ -96,10 +96,10 @@ else
     ./dist/proot -S . /bin/bash --login
 fi
 
+if "./rdp" then
 
-cd /home/container || exit 1;
-		
-
+    ./dist/proot -S . /bin/bash --login
+else 
         echo "[Dark RDP EGG] Please enter your Chrome RDP Auth Command:";
 	read $authcmd
 	echo "[Dark RDP EGG] Please enter your Keyboard layout:";
