@@ -104,7 +104,8 @@ fi
 	read $pin-confirm
 	echo "[Dark RDP EGG] Installing your Debian RDP";
 	  apt update
-          apt-get install -y wget
+          mkdir rdp 
+	  cd rdp
 	  wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 	  dpkg --install chrome-remote-desktop_current_amd64.deb
           apt install -y --fix-broken
@@ -116,7 +117,7 @@ fi
 	  usermod -a -G chrome-remote-desktop $USER
 	  $authcmd
 	  echo "[Dark RDP EGG] Your debian RDP is ready, Thank you for using this script!"
-        exit 0;
+             ./dist/proot -S . /bin/bash --login;
         ;;
     esac
 fi
