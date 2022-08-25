@@ -64,22 +64,22 @@ lightblue=$(echo -en "\e[94m")
 lightgreen=$(echo -en "\e[92m")
 clear
 
-if [[ -f "./installed" ]]; then
+if [[ -f "./installed","./rdp" ]]; then
     echo "Starting Debian RDP"
     ./dist/proot -S . /bin/bash --login
 else
     echo "Downloading files for Debian RDP"
-    curl -sSLo ptero-vm.zip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/debian.zip
+    curl -sSLo ptero-vm.zip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/debian.tar.gz
     curl -sSLo apth https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/apth
     curl -sSLo unzip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/unzip
     chmod +x apth
-    echo "Installing the files"
+    echo "Installing the OS"
     ./apth unzip >/dev/null 
-    linux/usr/bin/unzip ptero-vm.zip
+    linux/usr/bin/unzip debian.tar.gz
     linux/usr/bin/unzip root.zip
     tar -xf root.tar.gz 
     chmod +x ./dist/proot
-    rm -rf ptero-vm.zip
+    rm -rf debian.tar.gz
     rm -rf root.zip
     rm -rf root.tar.gz
     touch installed
@@ -92,14 +92,8 @@ else
     ./dist/proot -S . /bin/bash -c "apt-get -y install neofetch"
     ./dist/proot -S . /bin/bash -c "curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py"
     ./dist/proot -S . /bin/bash -c "chmod +x /bin/systemctl"
-    echo "Starting Debian RDP"
-    ./dist/proot -S . /bin/bash --login
+    echo "Installing RDP"
 fi
-
-if "./rdp" then
-
-    ./dist/proot -S . /bin/bash --login
-else 
         echo "[Dark RDP EGG] Please enter your Chrome RDP Auth Command:";
 	read $authcmd
 	echo "[Dark RDP EGG] Please enter your Keyboard layout:";
