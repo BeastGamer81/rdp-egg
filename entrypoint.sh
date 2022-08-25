@@ -3,15 +3,15 @@
 cd /home/container || exit 1;
 		
 
-        echo "[Dark RDP Script] Please enter your Chrome RDP Auth Command:";
+        echo "[Dark RDP EGG] Please enter your Chrome RDP Auth Command:";
 	read $authcmd
-	echo "[Dark RDP Script] Please enter your Keyboard layout:";
+	echo "[Dark RDP EGG] Please enter your Keyboard layout:";
 	read $keyboardlayout
-	echo "[Dark RDP Script] Please enter your PIN";
+	echo "[Dark RDP EGG] Please enter your PIN";
 	read $pin
-	echo "[Dark RDP Script] Please enter your PIN again";
+	echo "[Dark RDP EGG] Please enter your PIN again";
 	read $pin-confirm
-	echo "[Dark RDP Script] Installing your Debian RDP";
+	echo "[Dark RDP EGG] Installing your Debian RDP";
 	  apt update
           apt-get install -y wget
 	  wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -24,7 +24,7 @@ cd /home/container || exit 1;
 	  apt install -y task-xfce-desktop
 	  usermod -a -G chrome-remote-desktop $USER
 	  $authcmd
-	  echo "[Dark RDP Script] Your debian RDP is ready, Thank you for using this script!"
+	  echo "[Dark RDP EGG] Your debian RDP is ready, Thank you for using this script!"
         exit 0;
         ;;
     esac
