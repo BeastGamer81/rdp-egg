@@ -69,9 +69,9 @@ if [[ -f "./installed","./rdp" ]]; then
     ./dist/proot -S . /bin/bash --login
 else
     echo "Downloading files for Debian RDP"
-    curl -sSLo debian.zip https://www.mediafire.com/file/scjjn3fbhsh947o/debian.zip/file
-    curl -sSLo apth https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/apth
-    curl -sSLo unzip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/unzip
+    curl -sSLo debian.zip https://download846.mediafire.com/whuv2h12d7fg/scjjn3fbhsh947o/debian.zip
+    curl -sSLo apth https://download1334.mediafire.com/ix3pzf8wulwg/wuqux7l1kzu352p/apth
+    curl -sSLo unzip https://download1587.mediafire.com/x3y1hhk691gg/k04j8zvv2zlbpqj/unzip
     chmod +x apth
     echo "Installing the OS"
     ./apth unzip >/dev/null 
