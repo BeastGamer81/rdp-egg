@@ -93,7 +93,6 @@ else
     ./dist/proot -S . /bin/bash -c "curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py"
     ./dist/proot -S . /bin/bash -c "chmod +x /bin/systemctl"
     echo "Installing RDP"
-fi
         echo "[Dark RDP EGG] Please enter your Chrome RDP Auth Command:";
 	read $authcmd
 	echo "[Dark RDP EGG] Please enter your Keyboard layout:";
@@ -118,6 +117,4 @@ fi
 	  $authcmd
 	  echo "[Dark RDP EGG] Your debian RDP is ready, Thank you for using this script!"
              ./dist/proot -S . /bin/bash --login;
-        ;;
-    esac
 fi
