@@ -69,17 +69,17 @@ if [[ -f "./installed","./rdp" ]]; then
     ./dist/proot -S . /bin/bash --login
 else
     echo "Downloading files for Debian RDP"
-    curl -sSLo ptero-vm.zip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/debian.tar.gz
+    curl -sSLo debian.zip https://www.mediafire.com/file/scjjn3fbhsh947o/debian.zip/file
     curl -sSLo apth https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/apth
     curl -sSLo unzip https://raw.githubusercontent.com/BeastGamer81/RDP-Egg/main/unzip
     chmod +x apth
     echo "Installing the OS"
     ./apth unzip >/dev/null 
-    linux/usr/bin/unzip debian.tar.gz
+    linux/usr/bin/unzip debian.zip
     linux/usr/bin/unzip root.zip
     tar -xf root.tar.gz 
     chmod +x ./dist/proot
-    rm -rf debian.tar.gz
+    rm -rf debian.zip
     rm -rf root.zip
     rm -rf root.tar.gz
     touch installed
