@@ -13,7 +13,7 @@
         "quay.io/dark-development/rdp-egg"
     ],
     "file_denylist": [],
-    "startup": "bash ./entrypoint.sh",
+    "startup": "./entrypoint.sh",
     "config": {
         "files": "{}",
         "startup": "{}",
